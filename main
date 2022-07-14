@@ -1,0 +1,7 @@
+if _G.key == sub2appledevonytlol then
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sashkotashko420/wowwowowow/main/mainfree')))()
+end
+
+if _G.premiumkey == omgogmgmogmogmogpas24515premiumkeyuwu then
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sashkotashko420/wowwowowowpremium/main/mainpremium')))()
+end
