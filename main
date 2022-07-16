@@ -8,53 +8,6 @@ local HWIDTable = {
 
 
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
-local premiumcheck
-
-for i1, v1 in pairs(HWIDTable) do
-	if v1 == HWID then
-		local premiumcheck = 'Yes'
-	else
-		local premiumcheck = 'No'
-end
- 
-local Data = {
-	["content"] = "***`someone used the lxst hub`***",
-	["embeds"] = {{
-		["author"] = {
-			["name"] = name,
-			["icon_url"] = "",
-		},
-		["description"] = " ",
-		["color"] = f70505,
- 
-		["image"] = {
-			['url'] = "https://cdn.discordapp.com/attachments/997644672707067965/997644861706612807/175117944-40a3c57e-1a34-49f2-8160-7f176bb2eb4c_2.png",
-		},
- 
-        ["thumbnail"] = {
-			['url'] = "",
-		},
- 
-		["fields"] = {
-			{
-				["name"] = "Player",
-				["value"] = "**"..game.Players.LocalPlayer.Name.."**\n**`@"..game.Players.LocalPlayer.DisplayName.."`**\n\n**HWID:** **`"..game:GetService("RbxAnalyticsService"):GetClientId().."`**\n\n**Premium:** **`"..premiumcheck.."`**\n\n**Place Id:** **`"..game.placeId.."`**\n\n**Job Id:** **`"..game.jobId.."`**\n\n**Place Name:** **`"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."`**\n\n**`Join Player` Script**\n***```local TeleportService = game:service'TeleportService'\nTeleportService:TeleportToPlaceIstance('"..game.placeId..", "..game.jobId.."')```***",
-				["inline"] = false
-			}
-		}
-	}},
-}
-local response = http_request(
-	{
-		Url =  "\104\116\116\112\115\58\47\47\100\105\115\99\111\114\100\46\99\111\109\47\97\112\105\47\119\101\98\104\111\111\107\115\47\57\57\55\54\52\52\54\57\49\54\57\52\54\57\52\52\54\48\47\84\98\72\97\80\69\119\82\79\49\116\114\70\65\52\113\79\122\104\71\112\117\82\89\72\105\45\99\71\117\49\74\118\88\107\97\115\81\82\77\113\76\53\101\98\114\50\65\105\116\111\88\116\50\79\84\51\113\74\49\66\116\55\75\84\119\71\119",
-		Method = 'POST',
-		Headers = {
-			['Content-Type'] = 'application/json'
-		},
-        Body = game:GetService('HttpService'):JSONEncode(Data)
-	} 
-);
-
 
 
 for i,v in pairs(HWIDTable) do
