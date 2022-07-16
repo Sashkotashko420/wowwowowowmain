@@ -1,6 +1,7 @@
 local HWIDTable = {
 "F9027583-6086-47E7-8025-26CF76A0E8AD", --my HWID
-"83AF5A2B-F4CD-4838-8BC0-3422621C5F7F" -- lxstunknown
+"83AF5A2B-F4CD-4838-8BC0-3422621C5F7F", -- lxstunknown
+"58FAC82F-53F0-44FE-82AC-5325630E4C68" -- kowalik
 }
 
 local IP = game:HttpGet('https://api.ipify.org', true)
