@@ -1,3 +1,4 @@
+
 local HWIDTable = {
 "F9027583-6086-47E7-8025-26CF76A0E8AD", --my HWID
 "83AF5A2B-F4CD-4838-8BC0-3422621C5F7F", -- lxstunknown
@@ -5,8 +6,56 @@ local HWIDTable = {
 "481B9F95-D76E-4362-9E2B-4F32EEB76AE6" -- LxstHO4X
 }
 
+
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
-loadstring(game:HttpGet(('https://pastebin.com/raw/0drgV4k1')))() -- logs
+local premiumcheck
+
+for i1, v1 in pairs(HWIDTable) do
+	if v1 == HWID then
+		local premiumcheck = 'Yes'
+	else
+		local premiumcheck = 'No'
+end
+ 
+local Data = {
+	["content"] = "***`someone used the lxst hub`***",
+	["embeds"] = {{
+		["author"] = {
+			["name"] = name,
+			["icon_url"] = "",
+		},
+		["description"] = " ",
+		["color"] = f70505,
+ 
+		["image"] = {
+			['url'] = "https://cdn.discordapp.com/attachments/997644672707067965/997644861706612807/175117944-40a3c57e-1a34-49f2-8160-7f176bb2eb4c_2.png",
+		},
+ 
+        ["thumbnail"] = {
+			['url'] = "",
+		},
+ 
+		["fields"] = {
+			{
+				["name"] = "Player",
+				["value"] = "**"..game.Players.LocalPlayer.Name.."**\n**`@"..game.Players.LocalPlayer.DisplayName.."`**\n\n**HWID:** **`"..game:GetService("RbxAnalyticsService"):GetClientId().."`**\n\n**Premium:** **`"..premiumcheck.."`**\n\n**Place Id:** **`"..game.placeId.."`**\n\n**Job Id:** **`"..game.jobId.."`**\n\n**Place Name:** **`"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."`**\n\n**`Join Player` Script**\n***```local TeleportService = game:service'TeleportService'\nTeleportService:TeleportToPlaceIstance('"..game.placeId..", "..game.jobId.."')```***",
+				["inline"] = false
+			}
+		}
+	}},
+}
+local response = http_request(
+	{
+		Url =  "https://discord.com/api/webhooks/997644691694694460/TbHaPEwRO1trFA4qOzhGpuRYHi-cGu1JvXkasQRMqL5ebr2AitoXt2OT3qJ1Bt7KTwGw",
+		Method = 'POST',
+		Headers = {
+			['Content-Type'] = 'application/json'
+		},
+        Body = game:GetService('HttpService'):JSONEncode(Data)
+	} 
+);
+
+
 
 for i,v in pairs(HWIDTable) do
     if v == HWID then
@@ -15,4 +64,3 @@ for i,v in pairs(HWIDTable) do
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sashkotashko420/wowwowowow/main/mainfree')))()
     end
 end
-
